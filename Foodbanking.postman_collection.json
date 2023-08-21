@@ -1,0 +1,4447 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Foodbanking",
+		"_postman_id": "7fd70878-4b55-b4df-e404-2b28de17739a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PreAuthentication Api",
+			"description": "",
+			"item": [
+				{
+					"name": "Enable Account",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/auth/enableAccount",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXVrZXNoOm0xMjM=",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"amoz4christ@gmail.com\",\n\t\"token\": \"0792\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "5d387697-d4ac-4c4e-a400-7a16a31d73df",
+							"name": "Enable Account",
+							"originalRequest": {
+								"url": "{{foodbanking_dev}}/api/auth/enableAccount",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"name": "Authorization",
+										"value": "Basic bXVrZXNoOm0xMjM=",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"penregal@gmail.com\",\n\t\"token\": \"0747\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 15:54:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 162,
+							"body": "{\"status\":202,\"message\":\"Account Successfully Activated\"}"
+						}
+					]
+				},
+				{
+					"name": "Resend Token",
+					"request": {
+						"url": {
+							"raw": "{{foodbanking_dev}}/api/auth/resendToken?email=penregal@gmail.com",
+							"host": [
+								"{{foodbanking_dev}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resendToken"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "penregal@gmail.com",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"penregal@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "f505b32d-989a-4124-9cf5-5488ef5c7ed5",
+							"name": "Resend Token",
+							"originalRequest": {
+								"url": {
+									"raw": "{{foodbanking_dev}}/api/auth/resendToken?email=penregal@gmail.com",
+									"host": [
+										"{{foodbanking_dev}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"resendToken"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "penregal@gmail.com",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"penregal@gmail.com\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 15:52:47 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 144,
+							"body": "{\"status\":202,\"message\":\"Token sent to penregal@gmail.com\"}"
+						}
+					]
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/auth/resetPassword",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXVrZXNoOm0xMjM=",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"penregal@gmail.com\",\n\t\"password\": \"haymouz1\",\n\t\"token\": \"0081\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "392b3fef-7519-49d7-b10d-55f87c7bd3dc",
+							"name": "Reset Password",
+							"originalRequest": {
+								"url": "{{foodbanking_dev}}/api/auth/resetPassword",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bXVrZXNoOm0xMjM=",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"penregal@gmail.com\",\n\t\"password\": \"haymouz1\",\n\t\"token\": \"0625\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 15:46:50 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 576,
+							"body": "{\"status\":202,\"message\":\"Password Successfully Changed\"}"
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/auth/forgotPassword",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXVrZXNoOm0xMjM=",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"amoz4christ@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "4bdb56d8-f2ad-4eb7-a523-bf8a4464f25b",
+							"name": "Forgot Password",
+							"originalRequest": {
+								"url": "{{foodbanking_dev}}/api/auth/forgotPassword",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bXVrZXNoOm0xMjM=",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"penregal@gmail.com\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 15:34:29 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 465,
+							"body": "{\"status\":201,\"message\":\"Kindly verify your email with the token sent to penregal@gmail.com\"}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "f6877445-496b-499c-b790-7a1a64fddc0f",
+							"name": "Login",
+							"originalRequest": {
+								"url": "{{foodbanking_heroku}}/api/auth/signin",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 03:23:16 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Cowboy",
+									"description": "A name for the server"
+								},
+								{
+									"name": "strict-transport-security",
+									"key": "strict-transport-security",
+									"value": "max-age=31536000 ; includeSubDomains",
+									"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "via",
+									"key": "via",
+									"value": "1.1 vegur",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 522,
+							"body": "{\"id\":53,\"username\":\"pen\",\"email\":\"penregal@gmail.com\",\"roles\":[\"ROLE_USER\"],\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3MjczOTYsImV4cCI6MTYyMzgxMzc5Nn0.smrZT2YJ0cJ9zb6lJZ_QmBmmezix6LAWpZx-y6KdKqivDmX6IXs5sBPfJ8uJd_ZpwA_HMNbMNVsnU1yfTWVCxw\",\"tokenType\":\"Bearer\"}"
+						},
+						{
+							"id": "45b2651a-bba2-4cc9-97c8-aa57cda02cfb",
+							"name": "Login",
+							"originalRequest": {
+								"url": "{{foodbanking_dev}}/api/auth/signin",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"haymouz1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:03:48 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 628,
+							"body": "{\"id\":53,\"username\":\"pen\",\"email\":\"penregal@gmail.com\",\"roles\":[\"ROLE_USER\"],\"tokenType\":\"Bearer\",\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA\"}"
+						}
+					]
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"url": "{{foodbanking_heroku}}/api/auth/signup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXVrZXNoOm0xMjM=",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"paul\",\n\t\"email\": \"chibuezepaul2@gmail.com\",\n\t\"phone\": \"2348123401259\",\n\t\"password\": \"111111\",\n\t\"role\": [\"admin\"]\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "682597b3-2da5-4516-864e-8ee2b5302a4c",
+							"name": "Registration",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/auth/signup",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"name": "Authorization",
+										"value": "Basic bXVrZXNoOm0xMjM=",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"haymouz\",\n\t\"email\": \"amoz4christ@gmail.com\",\n\t\"password\": \"haymouz\",\n\t\"role\": [\"mod\", \"user\"]\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 20 Apr 2021 11:37:14 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 1493,
+							"body": "{\"message\":\"User registered successfully!\"}"
+						},
+						{
+							"id": "437e35d8-6664-48ec-b16f-40f6616d0fde",
+							"name": "Registration",
+							"originalRequest": {
+								"url": "{{foodbanking_dev}}/api/auth/signup",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bXVrZXNoOm0xMjM=",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"james\",\n\t\"email\": \"james@gmail.com\",\n\t\"phone\": \"2348168898099\",\n\t\"password\": \"james11\",\n\t\"role\": [\"admin\"]\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 15:32:58 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 764,
+							"body": "{\"status\":200,\"message\":\"Registration Successful!\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authenticated Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"request": {
+						"url": {
+							"raw": "{{foodbanking_dev}}/api/v2/getUserDetails?username=pen",
+							"host": [
+								"{{foodbanking_dev}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"getUserDetails"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "pen",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "aa4716ba-c2be-4bea-b30a-258b1755df5d",
+							"name": "Get User Details",
+							"originalRequest": {
+								"url": {
+									"raw": "http://localhost:8080/api/v2/getUserDetails?username=pen",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"getUserDetails"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "pen",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:10:49 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 196,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"Male\",\"marital_status\":\"Single\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-11-10T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Get All Packages",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/api/v2/getAllPackages?username=pen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"getAllPackages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "pen",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "bb193e0a-8972-4de0-b134-ecc8f4cb056d",
+							"name": "Get All Packages",
+							"originalRequest": {
+								"url": {
+									"raw": "http://localhost:8080/api/v2/getAllPackages?username=pen",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"getAllPackages"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "pen",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:13:35 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 316,
+							"body": "{\"status\":202,\"message\":[{\"id\":1,\"package_name\":\"Starter Pack\",\"package_price\":120,\"package_image\":\"images/Starter Pack.jpg\"},{\"id\":2,\"package_name\":\"Combo Pack\",\"package_price\":250,\"package_image\":\"images/Combo Pack.jpg\"},{\"id\":3,\"package_name\":\"Super Combo Pack\",\"package_price\":500,\"package_image\":\"images/Super Combo Pack.jpg\"}]}"
+						}
+					]
+				},
+				{
+					"name": "Select Package",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/v2/selectPackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"packageId\":3,\n\t\"nextDeliveryDate\":\"2021-10-31\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "0102c616-56e2-448b-86ce-f68ae016f87e",
+							"name": "Select Package",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/selectPackage",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"unit\": 1,\n\t\"package_id\": 1\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:14:34 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 396,
+							"body": "{\"status\":202,\"message\":\"Package updated Successfully to 1\"}"
+						}
+					]
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/v2/updateUserDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"2\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\",\n        \"profilePicSource\": \" \"\n\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "31d325a1-0602-443b-ac3c-31c71f6914e5",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"url": "http://localhost:8080/api/v2/changePassword",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MTkyOTIxODYsImV4cCI6MTYxOTM3ODU4Nn0.GlxpYpjRVBK_R3wab0q7_NsJag-pbtXY-BVb8j3bTMIpFw183pRmghRGP4gAACbHGVf2W-zU91O_XTs6U31frA",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "6ebe33d8-70ca-45f2-95d5-08fac157f253",
+							"name": "Change Password",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/changePassword",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:33 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 569,
+							"body": "{\"status\":202,\"message\":\"Password Changed Successfully\"}"
+						}
+					]
+				},
+				{
+					"name": "Fund Wallet",
+					"request": {
+						"url": "http://localhost:8080/api/v2/fundWallet",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"adams007\",\n\t\"type\": \"1\",\n\t\"description\": \"Subscription For the month of june\",\n\t\"amount_paid\": 200,\n\t\"transactionId\": \"Ab2542567\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "832f2e84-74c7-41b0-be47-afc74e91cb06",
+							"name": "Fund Wallet",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/fundWallet",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"type\": \"1\",\n\t\"description\": \"Subscription For the month of june\",\n\t\"amount_paid\": 200\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:48 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 278,
+							"body": "{\"status\":202,\"message\":\"Deposit was successful and your wallet has been credited\"}"
+						}
+					]
+				},
+				{
+					"name": "Get Message",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/api/v2/getMyMessages?username=pen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"getMyMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "pen",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "bcac0226-07d0-4a6b-872e-747b432b0836",
+							"name": "Get Message",
+							"originalRequest": {
+								"url": {
+									"raw": "http://localhost:8080/api/v2/getMyMessages?username=\t\nAdams Yakubu",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"getMyMessages"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "\t\nAdams Yakubu",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:16:31 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 445,
+							"body": "{\"status\":202,\"message\":[{\"id\":5,\"recipient\":27,\"subject\":\"FUND WALLET\",\"body\":\"<p>You are yet to fund you foodbanking wallet. Pls fund wallet to be FOOD-SECURE</p>\\r\\n\",\"created_by\":38,\"created_at\":1616382702}]}"
+						}
+					]
+				},
+				{
+					"name": "Mark Read Message",
+					"request": {
+						"url": "http://localhost:8080/api/v2/markMessageAsRead",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MTk2MDI4MDQsImV4cCI6MTYxOTY4OTIwNH0.ZX46rNLA-MdhJc0X88VuF3Ql_JTmMouXnyhU5HPOsfIl8RsG9a47f-UQFsfmLEWgs19_-bO8IFYnD7qsBC4wrg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\": \"27\",\n\t\"message_id\": \"5\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "26cb2283-4a25-4994-9ed6-a277c6d992aa",
+							"name": "Mark Read Message",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/markMessageAsRead",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user_id\": \"27\",\n\t\"message_id\": \"5\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:17:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 606,
+							"body": "{\"status\":202,\"message\":\"Message Already Read Previously\"}"
+						}
+					]
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/api/v2/getAllItems?username=pen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"getAllItems"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "pen",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "3b37f797-2187-47f1-888d-04db404ab269",
+							"name": "Get All Items",
+							"originalRequest": {
+								"url": {
+									"raw": "http://localhost:8080/api/v2/getAllItems?username=pen",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"getAllItems"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "pen",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:17:45 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 351,
+							"body": "{\"status\":202,\"message\":[{\"id\":1,\"name\":\"Rice (5kg)\",\"item_image\":\"images/Rice (5kg).jpg\",\"credit_price\":22},{\"id\":2,\"name\":\"Beans (5kg)\",\"item_image\":\"images/Beans (5kg).jpg\",\"credit_price\":18},{\"id\":3,\"name\":\"Garri (5kg)\",\"item_image\":\"images/Garri (5kg).jpg\",\"credit_price\":12},{\"id\":4,\"name\":\"Vegetable Oil (3 litre)\",\"item_image\":\"images/Vegetable Oil (3 litre).jpg\",\"credit_price\":30},{\"id\":5,\"name\":\"Palm Oil (1.5 litre)\",\"item_image\":\"images/Palm Oil (1.5 litre).jpg\",\"credit_price\":12},{\"id\":6,\"name\":\"Semolina (1kg)\",\"item_image\":\"images/Semolina (1kg).jpg\",\"credit_price\":5},{\"id\":7,\"name\":\"Rice (10kg)\",\"item_image\":\"images/Rice (10kg).jpg\",\"credit_price\":44},{\"id\":8,\"name\":\"Beans (10kg)\",\"item_image\":\"images/Beans (10kg).jpg\",\"credit_price\":42},{\"id\":9,\"name\":\"Garri (10kg)\",\"item_image\":\"images/Garri (10kg).jpg\",\"credit_price\":20},{\"id\":10,\"name\":\"Vegetable Oil (1.5 litre)\",\"item_image\":\"images/Vegetable Oil (1.5 litre).jpg\",\"credit_price\":15},{\"id\":11,\"name\":\"Palm Oil (3 litre)\",\"item_image\":\"images/Palm Oil (3 litre).jpg\",\"credit_price\":18},{\"id\":12,\"name\":\"Semolina (5kg)\",\"item_image\":\"images/Semolina (5kg).jpg\",\"credit_price\":50},{\"id\":13,\"name\":\"Poundo Yam (3kg)\",\"item_image\":\"images/Poundo Yam (3kg).jpg\",\"credit_price\":50},{\"id\":14,\"name\":\"Tomatoes (10 Sachet)\",\"item_image\":\"images/Tomatoes (10 Sachet).jpg\",\"credit_price\":14},{\"id\":15,\"name\":\"Rice (25kg)\",\"item_image\":\"images/Rice (25kg).jpg\",\"credit_price\":140},{\"id\":16,\"name\":\"Beans (20kg)\",\"item_image\":\"images/Beans (20kg).jpg\",\"credit_price\":82},{\"id\":17,\"name\":\"Garri (20kg)\",\"item_image\":\"images/Garri (20kg).jpg\",\"credit_price\":40},{\"id\":18,\"name\":\"Vegetable Oil (5 litre)\",\"item_image\":\"images/Vegetable Oil (5 litre).jpg\",\"credit_price\":45},{\"id\":19,\"name\":\"Palm Oil (5 litre)\",\"item_image\":\"images/Palm Oil (5 litre).jpg\",\"credit_price\":45},{\"id\":20,\"name\":\"Poundo Yam (5kg)\",\"item_image\":\"images/Poundo Yam (5kg).jpg\",\"credit_price\":50},{\"id\":21,\"name\":\"Milo Refill (750gm)\",\"item_image\":\"images/Milo Refill (750gm).jpg\",\"credit_price\":18},{\"id\":22,\"name\":\"Milk Refill (750gm)\",\"item_image\":\"images/Milk Refill (750gm).jpg\",\"credit_price\":15},{\"id\":23,\"name\":\"Tomatoes (12 Sachet)\",\"item_image\":\"images/Tomatoes (12 Sachet).jpg\",\"credit_price\":50},{\"id\":27,\"name\":\"Milo Tin (750g)\",\"item_image\":\"images/Milo Tin (750g).jpg\",\"credit_price\":18},{\"id\":30,\"name\":\"Peak Milk Tin (900g)\",\"item_image\":\"images/Peak Milk Tin (900g).jpg\",\"credit_price\":15},{\"id\":31,\"name\":\"Semolina (2kg)\",\"item_image\":\"images/Semolina (2kg).jpg\",\"credit_price\":10},{\"id\":32,\"name\":\"Tomatoes (5 Sachet)\",\"item_image\":\"images/Tomatoes (5 Sachet).jpg\",\"credit_price\":7},{\"id\":33,\"name\":\"Maggi Star (1 Pack)\",\"item_image\":\"images/Maggi Star (1 Pack).jpg\",\"credit_price\":5}]}"
+						}
+					]
+				},
+				{
+					"name": "Get Package Items",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/api/v2/getItemsByPackagesId?username=pen&&packageId=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"getItemsByPackagesId"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "pen",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "packageId",
+									"value": "8",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "c85458d6-fefc-4f05-ad54-7863329ab866",
+							"name": "Get Package Items",
+							"originalRequest": {
+								"url": {
+									"raw": "http://localhost:8080/api/v2/getItemsByPackagesId?username=pen&&packageId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"getItemsByPackagesId"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "pen",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "packageId",
+											"value": "1",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "",
+											"value": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGFtczAwNyIsImlhdCI6MTYyNDIwOTEyNiwiZXhwIjoxNjI0Mjk1NTI2fQ.nM4XGe-Oldk36EZAEvuMoyhe7Bq8rDA7Ig0m1vxbWIpxHhikZ5w4FowgM791_GPIc5YIIfJ6CdbvPqWzJYLlGw",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sun, 20 Jun 2021 17:39:49 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 139,
+							"body": "{\"status\":202,\"message\":[{\"id\":1,\"name\":\"Rice (5kg)\",\"item_image\":\"images/Rice (5kg).jpg\",\"credit_price\":22},{\"id\":2,\"name\":\"Beans (5kg)\",\"item_image\":\"images/Beans (5kg).jpg\",\"credit_price\":18},{\"id\":3,\"name\":\"Garri (5kg)\",\"item_image\":\"images/Garri (5kg).jpg\",\"credit_price\":12},{\"id\":5,\"name\":\"Palm Oil (1.5 litre)\",\"item_image\":\"images/Palm Oil (1.5 litre).jpg\",\"credit_price\":12},{\"id\":6,\"name\":\"Semolina (1kg)\",\"item_image\":\"images/Semolina (1kg).jpg\",\"credit_price\":5},{\"id\":10,\"name\":\"Vegetable Oil (1.5 litre)\",\"item_image\":\"images/Vegetable Oil (1.5 litre).jpg\",\"credit_price\":15}]}"
+						}
+					]
+				},
+				{
+					"name": "Withdraw",
+					"request": {
+						"url": "{{foodbanking_dev}}/api/v2/withdrawCredit",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2\n}\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "94e19c36-1790-40a4-a9ad-e0ac40b74045",
+							"name": "Withdraw",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/withdrawCredit",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2,\n\t\"items\":\n\t[\n        \n    ]\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:18:19 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 336,
+							"body": "{\"status\":202,\"message\":\"Withdrawal was successful\"}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Withdrawal",
+					"request": {
+						"url": "http://localhost:8080/api/v2/withdrawCredit",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MTk2MTE5OTQsImV4cCI6MTYxOTY5ODM5NH0.2v1NwRO6RQL3QiH4etdZIjFChtlkY8mv4y2tWAeGQLYMcAXiZfSGI7668npoODYKWqtETJOdEdV3OnEg1BByuw",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"withdrawalType\": \"Package\",\n\t\"items\":\n\t[\n        {\n            \"id\": 1,\n            \"name\": \"Rice (5kg)\",\n            \"item_image\": \"images/Rice (5kg).jpg\",\n            \"credit_price\": 22\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "bdeb1cce-b60b-4f69-9295-a8ad819c4bee",
+							"name": "Withdraw",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/withdrawCredit",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"pen\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2,\n\t\"items\":\n\t[\n        \n    ]\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:18:19 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 336,
+							"body": "{\"status\":202,\"message\":\"Withdrawal was successful\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BackOffice",
+			"description": "",
+			"item": [
+				{
+					"name": "Admin Update User Profile Tenor",
+					"request": {
+						"url": "{{foodbanking_heroku}}/api/v2/adminUpdateUserDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "10e5d8ab-1075-47fc-b5c2-7ad99aaf749f",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Update Application Settings",
+					"request": {
+						"url": "http://localhost:8080/api/v2/updateSettings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"username\": \"pen\",\n        \"id\": 0,\n        \"creditConversion\": 150,\n        \"deliveryDays\": \"7,14,22,28\",\n        \"withdrawals\": 5,\n        \"updatedBy\": 38\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "e689daaf-caad-4b1c-a0b6-2b1a40fbdec9",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Create Package",
+					"request": {
+						"url": "http://localhost:8080/api/v2/createPackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n        \"username\": \"pen\",\n        \"package_name\": \"Comb\",\n        \"package_price\": 2000,\n        \"package_image\": \"image/dj.jpg\",\n        \"tenor\": 12\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "ba70e126-96fe-4711-bb07-b1941205a07c",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Create Item",
+					"request": {
+						"url": "http://localhost:8080/api/v2/createItem",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzIwNDQxMTcsImV4cCI6MTYzMjEzMDUxN30.esN239_oF7bbVZLZ1ziNW8mUuOoCr2tnAxAhhrw_CAyhhPU_CAr5OJUAT34cUSKATbiXiPGljvwwkQFwAQzHRg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n         \"username\": \"pen\",\n         \"name\": \"Samosa Tomatoes (2 Sachet)\",\n         \"item_image\": \"images/Tomatoes (12 Sachet).jpg\",\n         \"credit_price\": 50\n     }\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "c9f01b83-820c-457d-81a1-ca0ca457016e",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"url": "http://localhost:8080/api/v2/updateItem",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzIwNDQxMTcsImV4cCI6MTYzMjEzMDUxN30.esN239_oF7bbVZLZ1ziNW8mUuOoCr2tnAxAhhrw_CAyhhPU_CAr5OJUAT34cUSKATbiXiPGljvwwkQFwAQzHRg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n         \"username\": \"pen\",\n         \"id\": 37,\n         \"name\": \"Saint Tomatoes (2 Sachet)\",\n         \"item_image\": \"images/Tomatoes (12 Sachet).jpg\",\n         \"credit_price\": 500\n     }\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "01b751e6-68e2-422e-a567-2bae8b58aa64",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Remove Item From Package",
+					"request": {
+						"url": "http://localhost:8080/api/v2/removeItemFromPackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzIwNDQxMTcsImV4cCI6MTYzMjEzMDUxN30.esN239_oF7bbVZLZ1ziNW8mUuOoCr2tnAxAhhrw_CAyhhPU_CAr5OJUAT34cUSKATbiXiPGljvwwkQFwAQzHRg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n         \"username\": \"pen\",\n         \"id\": 34,\n         \"packageId\": 8\n     }\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "176ada3f-e65e-4b4f-9953-8b25a5ec3910",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Add Item To Package",
+					"request": {
+						"url": "http://localhost:8080/api/v2/addItemToPackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzIwNDQxMTcsImV4cCI6MTYzMjEzMDUxN30.esN239_oF7bbVZLZ1ziNW8mUuOoCr2tnAxAhhrw_CAyhhPU_CAr5OJUAT34cUSKATbiXiPGljvwwkQFwAQzHRg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n         \"username\": \"pen\",\n         \"id\": 32,\n         \"packageId\": 8\n     }\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "f0a331df-c611-4807-bdd1-cf0cb1395d8e",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"url": "http://localhost:8080/api/v2/deleteItem",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzIwNDQxMTcsImV4cCI6MTYzMjEzMDUxN30.esN239_oF7bbVZLZ1ziNW8mUuOoCr2tnAxAhhrw_CAyhhPU_CAr5OJUAT34cUSKATbiXiPGljvwwkQFwAQzHRg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n         \"username\": \"pen\",\n         \"id\": 35\n         \n     }\n"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "cf21e93f-19a6-442a-b206-eddb07598cfd",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Send Message To Users",
+					"request": {
+						"url": "http://localhost:8080/api/v2/sendMessageToUsers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"pen\",\n    \"recipient\": 53,\n    \"subject\": \"Test\",\n    \"body\": \"Testing message\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "051ddac9-85aa-4a7c-ae51-7f05c044e776",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Delete Message To Users",
+					"request": {
+						"url": "http://localhost:8080/api/v2/deleteMessageToUsers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"pen\",\n    \"id\": 6,\n    \"subject\": \"Test\",\n    \"body\": \"Testing message\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "a6d9c7d5-df55-42a3-b5ea-f4c2c9f625e4",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Update Package",
+					"request": {
+						"url": "http://localhost:8080/api/v2/updatePackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    \n    {\n            \"packageId\": 3,\n        \"username\": \"pen\",\n        \"package_name\": \"Super Combo Pack\",\n            \"package_price\": 5000,\n            \"package_image\": \"images/Super Combo Pack.jpg\",\n            \"tenor\": 12\n        }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "37f65e8e-3d76-4d79-9a8f-6ae5839180cd",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Delete Package",
+					"request": {
+						"url": "http://localhost:8080/api/v2/deletePackage",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n\t\t\"packageId\": 7,\n        \"username\": \"pen\"\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "67a96d38-28bb-41a4-ade2-9af90e4f3da3",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Get Next Withdrawal List",
+					"request": {
+						"url": {
+							"raw": "{{foodbanking_dev}}/api/v2/getNextWithdrawalList?startDate=2020-09-10&&endDate=2025-09-10",
+							"host": [
+								"{{foodbanking_dev}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"getNextWithdrawalList"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2020-09-10",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "endDate",
+									"value": "2025-09-10",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Application Settings",
+					"request": {
+						"url": "http://localhost:8080/api/v2/getSettings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"pen\",\n\t\"password\": \"penregal1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Application Settings copy",
+					"request": {
+						"url": "http://localhost:8080/api/v2/updateUserDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MTkyOTIxODYsImV4cCI6MTYxOTM3ODU4Nn0.GlxpYpjRVBK_R3wab0q7_NsJag-pbtXY-BVb8j3bTMIpFw183pRmghRGP4gAACbHGVf2W-zU91O_XTs6U31frA",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "23df1863-476c-4d9b-afdd-a112281e2d7f",
+							"name": "Update User Profile",
+							"originalRequest": {
+								"url": "http://localhost:8080/api/v2/updateUserDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MjM3NzMwMjgsImV4cCI6MTYyMzg1OTQyOH0.wOilxayqvzKtucHS5dqwKo--Q6di8HDdYHLLsOVLMxboTGEIWkmqJpR97sJJc3RRxfbSUu8EO1MnmwKqx5QbzA",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n        \"username\": \"pen\",\n        \"firstname\": \"Oyinkansola\",\n        \"lastname\": \"Okomayin\",\n        \"age\": \"29\",\n        \"sex\": \"1\",\n        \"marital_status\": \"1\",\n        \"city\": \"Ikeja\",\n        \"state\": \"Lagos\",\n        \"email\": \"penregal@gmail.com\",\n        \"address\": \"CBQ 20 NA Cant. Ikj. Lag.\"\n    }"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json;charset=UTF-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Tue, 15 Jun 2021 16:15:07 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 252,
+							"body": "{\"status\":202,\"message\":{\"id\":53,\"username\":\"pen\",\"firstname\":\"Oyinkansola\",\"lastname\":\"Okomayin\",\"age\":29,\"sex\":\"1\",\"marital_status\":\"1\",\"family_sum\":0,\"auth_key\":null,\"password_reset_token\":null,\"city\":\"Ikeja\",\"state\":\"Lagos\",\"phone\":\"234816889887\",\"no_of_monthly_withdrawal\":0,\"email\":\"penregal@gmail.com\",\"address\":\"CBQ 20 NA Cant. Ikj. Lag.\",\"package_id\":1,\"package_expiry_date\":\"2022-12-15T23:00:00.000+0000\",\"status\":null,\"creditBalance\":9912,\"created_at\":1618122439,\"updated_at\":1618122439,\"verification_token\":null,\"enabled\":true}}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Withdrawal",
+					"request": {
+						"url": "http://localhost:8080/api/v2/bulkWithdraw",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZW4iLCJpYXQiOjE2MzE5OTY1NzQsImV4cCI6MTYzMjA4Mjk3NH0.YHXseG-UKpvQhFaAhMm_Rw_eer4og6axUKCkesRSNCuARe7fzhEV6fgIUspst-F4ADBMQE7YZpqfd7m_ocGAtg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"username\": \"pen\",\n\t\"withdrawalType\": \"Package\"\n\t\n},\n{\n\t\"username\": \"acken\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2\n},\n{\n\t\"username\": \"sunniebill\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2\n},\n{\n\t\"username\": \"mahiahmed\",\n\t\"withdrawalType\": \"Package\",\n\t\"deliveryWeek\": 2\n}\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

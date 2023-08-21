@@ -1,0 +1,12 @@
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (5, 34, 'facebook', 5244589852221598);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (6, 36, 'facebook', 10222500793687195);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (7, 37, 'facebook', 3472652122815203);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (8, 39, 'facebook', 10160780604928298);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (9, 17, 'facebook', 10219170185070747);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (10, 41, 'facebook', 10158111514723089);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (11, 43, 'facebook', 895330577967861);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (12, 47, 'facebook', 4179082295455887);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (13, 48, 'facebook', 10220568393498184);
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (14, 50, 'apple', '001813.0fab7a46109045eaa4039445a6faacf7.1854');
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (15, 51, 'apple', '000934.0d060180d33044d888b4121f535822d2.2050');
+insert into kqe742jb8a87m7jr.auth (id, user_id, source, source_id) values (16, 52, 'apple', '000214.c46c53d5fa3e4366803195d09196b466.0627');
