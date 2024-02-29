@@ -34,6 +34,8 @@ jobs:
     needs: build
     runs-on: [aws-ec2]
     steps:
+      - name: Switch to root user
+        run: sudo su
       - name: Pull Image form docker hub
         run: docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/foodbanking-api:latest
       - name: Remove old container
