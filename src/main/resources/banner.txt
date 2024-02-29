@@ -6,7 +6,7 @@
  |_|       \___/   \___/   \__,_|   |____/   \__,_| |_| |_| |_|\_\ |_| |_| |_|  \__, |
                                                                                  __/ |
                                                                                 |___/
-                                Developed by Haymouz, supported by Paul
+                                Developed by Haymouz CI/CD, supported by Paul
 
 
 
