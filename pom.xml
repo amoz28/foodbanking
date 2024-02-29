@@ -113,8 +113,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<mainClass>com.bezkoder.springjwt.FoodBankingBackendApplication</mainClass>
-
 				</configuration>
 			</plugin>
 		</plugins>

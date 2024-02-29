@@ -6,4 +6,4 @@ COPY target/FoodBankingBackend-0.0.1-SNAPSHOT.jar.original /app/foodbankingapi.j
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "foodbankingapi.jar"]
+CMD ["java", "-jar", "foodbankingapi.jar", "--spring.main.main-class=com.bezkoder.springjwt.FoodBackingBackendApplication"]
