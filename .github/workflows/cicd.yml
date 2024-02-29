@@ -5,7 +5,7 @@ on:
     branches: [deploy-to-ec2]
 
 jobs:
-  build-deploy:
+  build:
 #    name: Build and Deploy app
     runs-on: [ubuntu-latest]
     steps:
@@ -37,6 +37,6 @@ jobs:
       - name: Pull Image form docker hub
         run: docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/foodbanking-api:latest
       - name: Remove old container
-        run: docker rim -f foodbanking-api
+        run: docker rm -f foodbanking-api
       - name: Run Docker Container
         run: docker run -d -p 8080:8080 --name foodbanking-api ${{ secrets.DOCKER_HUB_USERNAME }}/foodbanking-api
